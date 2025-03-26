@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -13,10 +12,10 @@ const Footer = () => {
             <div className="flex items-center mb-6">
               <img 
                 src="/lovable-uploads/894b7f43-0e30-48eb-9ec3-ce3d0fe13391.png" 
-                alt="Sportopia Logo" 
+                alt="Kingimports Logo" 
                 className="h-10 mr-2 invert"
               />
-              <span className="text-xl font-bold font-display">SPORTOPIA</span>
+              <span className="text-xl font-bold font-display">KINGIMPORTS</span>
             </div>
             <p className="text-gray-400 mb-6">
               Elevando sua experiência esportiva com produtos premium e design inovador.
@@ -123,7 +122,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/10 mt-12 pt-8 text-center text-gray-400 text-sm">
-          <p>&copy; {new Date().getFullYear()} Sportopia. Todos os direitos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} Kingimports. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

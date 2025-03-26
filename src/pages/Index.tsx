@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import Navigation from "@/components/ui/navigation";
@@ -52,7 +51,7 @@ const Index = () => {
             className="max-w-3xl mx-auto mb-16"
           >
             <span className="inline-block text-sportopia-blue text-sm uppercase tracking-widest font-semibold mb-2">
-              Bem-vindo à Sportopia
+              Bem-vindo à Kingimports
             </span>
             <h1 className="text-4xl md:text-5xl font-bold font-display tracking-tight mb-6">
               O Futuro da Moda Esportiva

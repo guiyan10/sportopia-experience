@@ -14,7 +14,7 @@ const heroBackgrounds = [
     url: "https://images.unsplash.com/photo-1556906781-9a412961c28c?auto=format&q=90&fit=crop&w=1920",
     position: "center",
     title: "ESTILO E TECNOLOGIA",
-    subtitle: "A nova coleção Primetech acabou de chegar",
+    subtitle: "A nova coleção Kingimports acabou de chegar",
   },
   {
     url: "https://images.unsplash.com/photo-1552066379-e7bfd22155c5?auto=format&q=90&fit=crop&w=1920",

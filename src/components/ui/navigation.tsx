@@ -38,14 +38,14 @@ const Navigation = () => {
         >
           <img 
             src="/lovable-uploads/894b7f43-0e30-48eb-9ec3-ce3d0fe13391.png" 
-            alt="Sportopia Logo" 
+            alt="Kingimports Logo" 
             className="h-10 mr-2" 
           />
           <span className={cn(
             "transition-colors duration-500",
             isScrolled ? "text-sportopia-black" : "text-sportopia-black"
           )}>
-            SPORTOPIA
+            KINGIMPORTS
           </span>
         </Link>
 
