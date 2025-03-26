@@ -5,22 +5,22 @@ import { ArrowRight } from "lucide-react";
 
 const heroBackgrounds = [
   {
-    url: "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?auto=format&q=90&fit=crop&w=1920",
+    url: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&q=90&fit=crop&w=1920",
     position: "center",
-    title: "ELEVANDO SEU JOGO",
-    subtitle: "Equipamentos premium para sua melhor performance",
+    title: "CAMISAS OFICIAIS",
+    subtitle: "As melhores camisas de times do mundo em um só lugar",
   },
   {
-    url: "https://images.unsplash.com/photo-1556906781-9a412961c28c?auto=format&q=90&fit=crop&w=1920",
+    url: "https://images.unsplash.com/photo-1550881111-7cfde14b8073?auto=format&q=90&fit=crop&w=1920",
     position: "center",
-    title: "ESTILO E TECNOLOGIA",
-    subtitle: "A nova coleção Kingimports acabou de chegar",
+    title: "ESCOLHA SEU TIME",
+    subtitle: "Sua paixão merece uma camisa original Kingimports",
   },
   {
-    url: "https://images.unsplash.com/photo-1552066379-e7bfd22155c5?auto=format&q=90&fit=crop&w=1920",
+    url: "https://images.unsplash.com/photo-1581376932111-59bd38171df1?auto=format&q=90&fit=crop&w=1920",
     position: "center",
-    title: "CORRA MAIS LONGE",
-    subtitle: "Descubra tênis projetados para ultrapassar limites",
+    title: "COLEÇÃO EUROPEIA",
+    subtitle: "As camisas dos maiores clubes da Europa já disponíveis",
   },
 ];
 
