@@ -1,13 +1,11 @@
-
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import Navigation from "@/components/ui/navigation";
 import HeroSection from "@/components/ui/hero-section";
 import FeaturedProducts from "@/components/ui/featured-products";
 import Footer from "@/components/ui/footer";
-import { Shirt, Flag, Award, CreditCard } from "lucide-react";
+import { Shirt, Flag, Award, CreditCard, ArrowRight } from "lucide-react";
 
-// Configurações para a animação de entrada da página
 const pageVariants = {
   initial: {
     opacity: 0,
@@ -27,7 +25,6 @@ const pageVariants = {
 };
 
 const Index = () => {
-  // Scroll para o topo quando a página carrega
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
