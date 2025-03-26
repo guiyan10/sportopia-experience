@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { ShoppingCart, Search, Menu } from "lucide-react";
+import { ShoppingCart, Search, Menu, Shirt } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const Navigation = () => {
@@ -50,10 +50,10 @@ const Navigation = () => {
         </Link>
 
         <nav className="hidden md:flex items-center space-x-8">
-          {["Camisetas", "Chuteiras", "Tênis", "Ofertas"].map((item) => (
+          {["Brasileirão", "Premier League", "La Liga", "Serie A", "Bundesliga"].map((item) => (
             <Link
               key={item}
-              to={`/category/${item.toLowerCase()}`}
+              to={`/category/${item.toLowerCase().replace(/\s+/g, "-")}`}
               className={cn(
                 "text-sm font-medium relative py-2 transition-colors duration-300",
                 isScrolled ? "text-sportopia-black" : "text-sportopia-black",
@@ -150,10 +150,10 @@ const Navigation = () => {
         </button>
 
         <nav className="flex flex-col items-center space-y-6">
-          {["Camisetas", "Chuteiras", "Tênis", "Ofertas"].map((item) => (
+          {["Brasileirão", "Premier League", "La Liga", "Serie A", "Bundesliga"].map((item) => (
             <Link
               key={item}
-              to={`/category/${item.toLowerCase()}`}
+              to={`/category/${item.toLowerCase().replace(/\s+/g, "-")}`}
               onClick={toggleMenu}
               className="text-2xl font-medium text-white hover:text-sportopia-blue transition-colors duration-300"
             >

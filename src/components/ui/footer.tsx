@@ -1,6 +1,8 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Shirt } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -18,7 +20,7 @@ const Footer = () => {
               <span className="text-xl font-bold font-display">KINGIMPORTS</span>
             </div>
             <p className="text-gray-400 mb-6">
-              Elevando sua experiência esportiva com produtos premium e design inovador.
+              A melhor loja online de camisas oficiais de futebol para torcedores apaixonados.
             </p>
             <div className="flex space-x-4">
               {["facebook", "instagram", "twitter", "youtube"].map((social) => (
@@ -41,12 +43,12 @@ const Footer = () => {
 
           {/* Coluna 2 - Produtos */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 font-display">Produtos</h4>
+            <h4 className="text-lg font-semibold mb-6 font-display">Categorias</h4>
             <ul className="space-y-3">
-              {["Camisetas", "Chuteiras", "Tênis", "Acessórios", "Equipamentos", "Ofertas"].map((item) => (
+              {["Brasileirão", "Premier League", "La Liga", "Serie A", "Bundesliga", "Seleções", "Retrô"].map((item) => (
                 <li key={item}>
                   <Link
-                    to={`/category/${item.toLowerCase()}`}
+                    to={`/category/${item.toLowerCase().replace(/\s+/g, "-")}`}
                     className="text-gray-400 hover:text-white transition-colors duration-300"
                   >
                     {item}
@@ -63,9 +65,10 @@ const Footer = () => {
               {[
                 "FAQ",
                 "Trocas e Devoluções",
+                "Tabela de Tamanhos",
+                "Cuidados com a Camisa",
                 "Política de Privacidade",
                 "Termos de Uso",
-                "Rastreio de Pedidos",
                 "Contato",
               ].map((item) => (
                 <li key={item}>
@@ -84,7 +87,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6 font-display">Newsletter</h4>
             <p className="text-gray-400 mb-4">
-              Inscreva-se para receber novidades e ofertas exclusivas.
+              Inscreva-se para receber novidades sobre lançamentos e promoções de camisas.
             </p>
             <form className="mb-6">
               <div className="flex flex-col sm:flex-row">

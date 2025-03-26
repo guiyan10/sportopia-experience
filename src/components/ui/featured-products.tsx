@@ -2,7 +2,7 @@
 import React, { useRef, useEffect } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import ProductCard from "./product-card";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Shirt } from "lucide-react";
 
 // Dados de produtos em destaque
 const featuredProducts = [
@@ -11,30 +11,30 @@ const featuredProducts = [
     name: "Camisa Oficial Brasil 2023",
     price: 349.9,
     image: "https://images.unsplash.com/photo-1580087564293-6d23b0ecaa9f?auto=format&q=80&w=600",
-    category: "Camisetas",
+    category: "Seleções",
     isNew: true,
   },
   {
     id: "2",
-    name: "Chuteira Nike Phantom GT2",
-    price: 899.9,
-    image: "https://images.unsplash.com/photo-1593095945242-55a7a5f5331c?auto=format&q=80&w=600",
-    category: "Chuteiras",
+    name: "Camisa Real Madrid Home 23/24",
+    price: 389.9,
+    image: "https://images.unsplash.com/photo-1629285483773-6b5cde7df315?auto=format&q=80&w=600",
+    category: "La Liga",
     discount: 15,
   },
   {
     id: "3",
-    name: "Tênis Adidas Ultraboost 23",
-    price: 1199.9,
-    image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&q=80&w=600",
-    category: "Tênis",
+    name: "Camisa Manchester City 23/24",
+    price: 379.9,
+    image: "https://images.unsplash.com/photo-1590744029432-ad51a5983d64?auto=format&q=80&w=600",
+    category: "Premier League",
   },
   {
     id: "4",
     name: "Camisa Barcelona Away 23/24",
     price: 379.9,
     image: "https://images.unsplash.com/photo-1581952976147-5a2d15560349?auto=format&q=80&w=600",
-    category: "Camisetas",
+    category: "La Liga",
     discount: 10,
   },
 ];
@@ -79,7 +79,7 @@ const FeaturedProducts = () => {
               transition={{ delay: 0.1 }}
               className="text-4xl md:text-5xl font-bold font-display tracking-tight"
             >
-              Produtos em Alta
+              Camisas em Alta
             </motion.h2>
           </div>
           <motion.div
@@ -91,7 +91,7 @@ const FeaturedProducts = () => {
               href="/products"
               className="flex items-center font-medium text-sportopia-black hover:text-sportopia-blue transition-colors duration-300"
             >
-              Ver Todos
+              Ver Todas
               <ArrowRight size={16} className="ml-1" />
             </a>
           </motion.div>

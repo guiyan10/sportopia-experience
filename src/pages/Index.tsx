@@ -1,9 +1,11 @@
+
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import Navigation from "@/components/ui/navigation";
 import HeroSection from "@/components/ui/hero-section";
 import FeaturedProducts from "@/components/ui/featured-products";
 import Footer from "@/components/ui/footer";
+import { Shirt, Flag, Award, CreditCard } from "lucide-react";
 
 // Configurações para a animação de entrada da página
 const pageVariants = {
@@ -54,31 +56,35 @@ const Index = () => {
               Bem-vindo à Kingimports
             </span>
             <h1 className="text-4xl md:text-5xl font-bold font-display tracking-tight mb-6">
-              O Futuro da Moda Esportiva
+              Sua Loja de Camisas Oficiais
             </h1>
             <p className="text-lg text-gray-600">
-              Descubra produtos premium que combinam tecnologia avançada, 
-              design inovador e materiais de alta qualidade para elevar seu 
-              desempenho e estilo.
+              Somos especializados em camisas de futebol originais dos maiores times do mundo. 
+              Na Kingimports, você encontra qualidade, autenticidade e estilo para torcer com orgulho.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
               {
+                title: "100% Originais",
+                description: "Todas as nossas camisas são produtos oficiais licenciados pelos clubes.",
+                icon: <Award className="w-8 h-8 text-sportopia-blue" />,
+              },
+              {
+                title: "Variedade de Times",
+                description: "Oferecemos camisas dos principais clubes e seleções nacionais do mundo.",
+                icon: <Flag className="w-8 h-8 text-sportopia-blue" />,
+              },
+              {
                 title: "Qualidade Premium",
-                description: "Materiais de alta durabilidade selecionados para performance superior.",
-                icon: "https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/adidas.svg",
+                description: "Materiais de alta durabilidade com tecidos respiráveis e confortáveis.",
+                icon: <Shirt className="w-8 h-8 text-sportopia-blue" />,
               },
               {
-                title: "Design Inovador",
-                description: "Estética moderna e arrojada para destacar seu estilo dentro e fora de campo.",
-                icon: "https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/nike.svg",
-              },
-              {
-                title: "Tecnologia Avançada",
-                description: "Recursos tecnológicos que potencializam seu conforto e desempenho.",
-                icon: "https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/puma.svg",
+                title: "Pagamento Seguro",
+                description: "Diversas opções de pagamento com total segurança para sua compra.",
+                icon: <CreditCard className="w-8 h-8 text-sportopia-blue" />,
               },
             ].map((feature, index) => (
               <motion.div
@@ -90,7 +96,7 @@ const Index = () => {
                 className="bg-white p-8 rounded-xl shadow-md hover-lift"
               >
                 <div className="w-16 h-16 bg-sportopia-gray rounded-full flex items-center justify-center mx-auto mb-6">
-                  <img src={feature.icon} className="w-8 h-8" alt={feature.title} />
+                  {feature.icon}
                 </div>
                 <h3 className="font-semibold text-xl mb-3">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
@@ -106,7 +112,7 @@ const Index = () => {
         <div 
           className="absolute inset-0 z-0 opacity-15"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&q=75&w=1920')",
+            backgroundImage: "url('https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&q=75&w=1920')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -121,23 +127,23 @@ const Index = () => {
               viewport={{ once: true, amount: 0.3 }}
             >
               <span className="inline-block text-sportopia-blue text-sm uppercase tracking-widest font-semibold mb-2">
-                Tecnologia
+                Qualidade Premium
               </span>
               <h2 className="text-4xl md:text-5xl font-bold font-display tracking-tight mb-6">
-                Desempenho ao seu Alcance
+                Camisas Originais
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Na Sportopia, combinamos materiais de ponta e tecnologia avançada para criar 
-                produtos que elevam seu jogo a um novo patamar. Cada peça é desenvolvida com 
-                atenção meticulosa aos detalhes para garantir conforto, durabilidade e estilo.
+                Na Kingimports, garantimos que todas as nossas camisas são 100% originais, 
+                adquiridas diretamente de fornecedores oficiais. Cada detalhe é cuidadosamente
+                verificado para proporcionar a melhor experiência aos nossos clientes.
               </p>
               
               <div className="space-y-4 mb-8">
                 {[
-                  "Tecidos respiráveis com controle de umidade",
-                  "Sistema de amortecimento responsivo em calçados",
-                  "Materiais leves e resistentes para máxima mobilidade",
-                  "Design aerodinâmico para melhor desempenho"
+                  "Tecidos respiráveis e confortáveis",
+                  "Escudos e patrocínios bordados com perfeição",
+                  "Cores vibrantes que não desbotam facilmente",
+                  "Design autêntico e idêntico ao usado pelos jogadores"
                 ].map((item, index) => (
                   <div key={index} className="flex items-start">
                     <div className="w-5 h-5 rounded-full bg-sportopia-blue/20 flex items-center justify-center mr-3 mt-1">
@@ -148,8 +154,9 @@ const Index = () => {
                 ))}
               </div>
               
-              <button className="btn-primary">
-                Explorar Tecnologias
+              <button className="px-8 py-4 bg-sportopia-blue text-white font-semibold rounded-md inline-flex items-center transition-all duration-300 hover:bg-sportopia-blue/90 hover:scale-105">
+                Explorar Coleção
+                <ArrowRight size={16} className="ml-2" />
               </button>
             </motion.div>
             
@@ -162,8 +169,8 @@ const Index = () => {
             >
               <div className="relative rounded-xl overflow-hidden aspect-[4/5]">
                 <img 
-                  src="https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?auto=format&q=80&w=800" 
-                  alt="Tênis de alta tecnologia" 
+                  src="https://images.unsplash.com/photo-1617606003139-c55e4485f78a?auto=format&q=80&w=800" 
+                  alt="Camisa oficial de time" 
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -171,14 +178,12 @@ const Index = () => {
               <div className="absolute -bottom-10 -left-10 p-6 bg-white rounded-xl shadow-xl max-w-xs">
                 <div className="flex items-center mb-3">
                   <div className="w-10 h-10 rounded-full bg-sportopia-blue/20 flex items-center justify-center mr-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-sportopia-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
+                    <Shirt className="h-5 w-5 text-sportopia-blue" />
                   </div>
-                  <span className="font-semibold">Tecnologia UltraBoost</span>
+                  <span className="font-semibold">Autenticidade Garantida</span>
                 </div>
                 <p className="text-sm text-gray-600">
-                  Amortecimento responsivo que devolve energia a cada passada, proporcionando conforto incomparável.
+                  Todas as nossas camisas possuem etiquetas e detalhes oficiais que garantem a originalidade do produto.
                 </p>
               </div>
             </motion.div>
@@ -190,9 +195,9 @@ const Index = () => {
         <div className="container mx-auto px-4 md:px-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {[
-              { number: "10k+", label: "Clientes Satisfeitos" },
-              { number: "250+", label: "Produtos de Alta Qualidade" },
-              { number: "15+", label: "Marcas Premium" },
+              { number: "5k+", label: "Clientes Satisfeitos" },
+              { number: "200+", label: "Modelos de Camisas" },
+              { number: "50+", label: "Clubes Disponíveis" },
               { number: "5★", label: "Avaliações de Clientes" },
             ].map((stat, index) => (
               <motion.div
@@ -223,11 +228,11 @@ const Index = () => {
                 Novidades
               </span>
               <h2 className="text-4xl md:text-5xl font-bold font-display tracking-tight mb-6">
-                As Últimas Tendências
+                Últimos Lançamentos
               </h2>
               <p className="text-lg text-gray-600">
-                Fique à frente com nossas coleções mais recentes, 
-                inspiradas nas últimas tendências e tecnologias do mundo esportivo.
+                Fique por dentro dos mais recentes lançamentos de camisas oficiais dos seus times favoritos.
+                Novas coleções chegam semanalmente!
               </p>
             </motion.div>
           </div>
@@ -235,21 +240,21 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: "Tênis para Todos os Terrenos",
-                image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&q=80&w=600",
-                category: "Calçados",
+                title: "Novas Camisas da Premier League 2023/24",
+                image: "https://images.unsplash.com/photo-1521138054413-5a47d349b7af?auto=format&q=80&w=600",
+                category: "Premier League",
                 date: "10 Jun 2023",
               },
               {
-                title: "Camisetas com Tecnologia Dry-Fit",
-                image: "https://images.unsplash.com/photo-1562183241-b937e95585b6?auto=format&q=80&w=600",
-                category: "Vestuário",
+                title: "Coleção Vintage - Times Históricos",
+                image: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&q=80&w=600",
+                category: "Retrô",
                 date: "15 Jun 2023",
               },
               {
-                title: "Chuteiras para Gramados Sintéticos",
-                image: "https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&q=80&w=600",
-                category: "Futebol",
+                title: "Camisas Oficiais da Copa América 2024",
+                image: "https://images.unsplash.com/photo-1580087564293-6d23b0ecaa9f?auto=format&q=80&w=600",
+                category: "Seleções",
                 date: "22 Jun 2023",
               },
             ].map((article, index) => (
